@@ -1,6 +1,9 @@
 # CliToDo
+### _In class Project using Angular 8.14.2017_
+By Michelle Poterek and Jacob Ruleaux
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## Description
+This is a project focused around building out a To-Do list application in Angular CLI from scratch. A user is able to prioritize tasks, edit them, and mark them as complete. The project largely focused around two-way data binding.
 
 ## Development server
 
