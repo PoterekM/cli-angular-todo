@@ -7,15 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Homework!';
-  currentFocus: string = "angular homework";
+  currentFocus: 'angular homework';
   currentTime = new Date();
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  firstTask: Task = new Task("Finish weekend angular homework");
+  tasks: Task[] = [
+    new Task('Finish weekend homework'),
+    new Task('Begin brainstorming possible JavaScript group projects'),
+    new Task('Add README file to last few Angular repos on GitHub')
+  ];
 }
 
 export class Task {
-  public done: boolean = false;
-  constructor(public description: string) {}
+  public done: false;
+  constructor(public description: string) { }
 }
