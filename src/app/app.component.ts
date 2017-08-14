@@ -30,8 +30,8 @@ export class AppComponent {
     }
   }
 
-  editTask() {
-  alert('You just requested to edit a Task!');
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
 
