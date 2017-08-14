@@ -13,17 +13,26 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
   tasks: Task[] = [
-    new Task('Finish weekend homework'),
-    new Task('Begin brainstorming possible JavaScript group projects'),
-    new Task('Add README file to last few Angular repos on GitHub')
+    new Task('Finish weekend homework', 3),
+    new Task('Begin brainstorming possible JavaScript group projects', 2),
+    new Task('Add README file to last few Angular repos on GitHub', 2)
   ];
 
   editTask() {
-  alert("You just requested to edit a Task!");
+  alert('You just requested to edit a Task!');
+  }
+
+
+  isDone(clickedTask: Task) {
+    if(clickedTask.done === true) {
+      alert('This task is done!');
+    } else {
+      alert('This task is not done. Better get to work!');
+    }
   }
 }
 
 export class Task {
-  public done: false;
-  constructor(public description: string) { }
+  public done: boolean = false;
+  constructor(public description: string, public priority: number) { }
 }
