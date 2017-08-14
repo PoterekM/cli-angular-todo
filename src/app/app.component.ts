@@ -16,7 +16,9 @@ export class AppComponent {
     new Task('Finish weekend homework', 3),
     new Task('Begin brainstorming possible JavaScript group projects', 2),
     new Task('Add README file to last few Angular repos on GitHub', 2)
-    ];
+  ];
+
+  selectedTask: Task = this.tasks[0];
 
   priorityColor(currentTask){
     if (currentTask.priority === 3){
